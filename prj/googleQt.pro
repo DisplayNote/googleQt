@@ -89,3 +89,4 @@ if(!isEmpty( ARD_DEBUG )){
 
 INCLUDEPATH += $${SRC_DIR}
 
+include($${SRC_DIR}/install.pri)

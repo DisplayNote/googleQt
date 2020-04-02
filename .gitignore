@@ -10,7 +10,7 @@ moc_*.h
 *.sqlite
 *.DS_Store
 res.txt
-
+install/
 autotest/autotest
 examples/authorize/authorize
 examples/authorize/scope-auth-url.info
