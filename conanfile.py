@@ -3,7 +3,7 @@ from conans import ConanFile
 from conans import tools
 
 class GoogleQtConan(ConanFile):
-    name = "GoogleQt"
+    name = "googleQt"
     version = "1.0.0"
     settings = "os", "compiler", "build_type", "arch"
     description = "Package for GoogleQt"
@@ -17,3 +17,4 @@ class GoogleQtConan(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = tools.collect_libs(self)
+    

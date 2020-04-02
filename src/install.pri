@@ -17,7 +17,13 @@ isEmpty(PREFIX) {
 # Path where install the static library
 target.path = $$PREFIX/lib
 
-# Path and files for install the headers
-headers.path = $$PREFIX/include/googleQt
-headers.files = $$HEADERS
-INSTALLS += target headers
+INSTALL_HEADERS = $$HEADERS
+
+for(header, INSTALL_HEADERS) {
+  path = $${PREFIX}/include/src/$${dirname(header)}
+  eval(headers_$${path}.files += $$header)
+  eval(headers_$${path}.path = $$path)
+  eval(INSTALLS *= headers_$${path})
+}
+
+INSTALLS += target
