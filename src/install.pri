@@ -17,9 +17,7 @@ isEmpty(PREFIX) {
 # Path where install the static library
 target.path = $$PREFIX/lib
 
-
 # Path and files for install the headers
 headers.path = $$PREFIX/include/googleQt
 headers.files = $$HEADERS
-message($$headers.path)
 INSTALLS += target headers
