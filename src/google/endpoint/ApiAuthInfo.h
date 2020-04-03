@@ -15,6 +15,7 @@ namespace googleQt{
         void setEmail(QString email){ m_email = email; }
         
         QString getAccessToken()const {return m_accessToken;}
+        void setAccessToken(QString accessToken) {m_accessToken = accessToken;}
         QString getRefreshToken()const{return m_refreshToken;}
         QString getEmail()const{return m_email; }
         int     getExpirationInSeconds()const{return m_expires_in;}
