@@ -20,7 +20,9 @@ target.path = $$PREFIX/lib
 INSTALL_HEADERS = $$HEADERS
 
 for(header, INSTALL_HEADERS) {
-  path = $${PREFIX}/include/src/$${dirname(header)}
+  original_dir = $${dirname(header)}
+  dir = $$replace(original_dir, ../src, )
+  path = $${PREFIX}/include/$${dir}
   eval(headers_$${path}.files += $$header)
   eval(headers_$${path}.path = $$path)
   eval(INSTALLS *= headers_$${path})
